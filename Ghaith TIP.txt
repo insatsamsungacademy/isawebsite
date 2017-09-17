@@ -1,0 +1,6 @@
+To run your project with php server without going to the www wamp/xamp repo 
+
+
+Open terminal in this repo :
+
+type : $php -S localhost:8000
