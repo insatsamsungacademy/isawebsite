@@ -21,5 +21,5 @@ if(mysqli_error($connect)!="")
 		mysqli_close($connect);
 header('Location: index.php');		
 
-}
+}		
 		?>
