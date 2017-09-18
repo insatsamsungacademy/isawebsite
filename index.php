@@ -1,403 +1,435 @@
-<?php
-include("config.php");
-include("connexion.php");
+<!DOCTYPE html>
 
-?>
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Insat Samsung Academy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
 
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-<!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Samsung Academy</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" href="assets/images/favicon.ico"
-    <!--<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" href="assets/css/fonticons.css">
-    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
 
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
 
-    <!--For Plugins external css-->
-    <link rel="stylesheet" href="assets/css/plugins.css"/>
-
-
-    <link rel="stylesheet" href="assets/css/navmenu.css">
-
-    <!--Theme custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--Theme Responsive css-->
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
-
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+            <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
     </style>
-</head>
-<body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
 
-<!--Home page style-->
+    </head>
+    <!-- END HEAD -->
 
-<div class='preloader'>
-    <div class='loaded'>&nbsp;</div>
-</div>
-<nav id="main-nav">
-    <ul>
-        <li><a href="#home"><span>Home</span></a></li>
-        <li><a href="#about"><span>About Me</span></a></li>
-        <li><a href="#register"><span>Register</span></a></li>
-        <li><a href="#project"><span>Add project</span></a></li>
-        <li><a href="#portfolio"><span>Portfolio</span></a></li>
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header" class="no-js">
 
-    </ul>
-    <a href="#" class="cd-close-menu">Close<span></span></a>
-</nav>
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
 
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
 
-<figure class="main_area">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <!-- <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li> !-->
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
 
-    <div id="home" class="home home-main-content">
-        <div class="home-overlay-fluid">
+        <!--========== SLIDER ==========-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="container">
-                <div class="row">
-                    <div class="main_home_content text-center wow fadeInUp" data-wow-duration="1.5s">
-                        <div class="div-menu">
-                            <header class="cd-header">
-                                <a class="cd-menu-trigger" href="#main-nav"><span></span></a>
-                            </header>
-                        </div>
-
-                        <div class="logo_img">
-                            <a href=""><img src="assets/images/samsunglogosmall.png"  alt=""/></a>
-                        </div>
-                        <h2>INSAT Samsung Academy</h2>
-                        <div class="separator"></div>
-                        <p></p>
-                    </div>
-
-
-                </div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
             </div>
-        </div>
-    </div><!-- End of Banner Section -->
 
-
-    <section id="about" class="about">
-        <div class="about_overlay">
-            <div class="container chikobiko">
-                <div class="user_seperator text-center">
-                    <a href=""><i class="lnr lnr-user"></i></a>
-                </div>
-                <div class="row">
-                    <div class="head_title text-center">
-                        <h2><i class="fa fa-star"></i> About Us <i class="lnr lnr-star"></i></h2>
-                    </div>
-
-                    <div class="main_about_content text-center wow fadeIn" data-wow-duration="1.5s">
-                        <div class="col-md-12">
-                            <div class="about_top_content">
-                                <i class="fa fa-quote-right"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation...</p>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="img/1920x1080/01.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h1 class="carousel-title">Insat Samsung Academy</h1>
+                                <p class="color-white">Rejoigner nous et réaliser votre appli Android et VR avec le support de SAMSUNG !</p>
                             </div>
-
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="img/1920x1080/02.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h2 class="carousel-title">I.S.A</h2>
+                                <p class="color-white" >Profitez de nos formations pour aquérir les connaissances nécessaires afin de créer vos propres applications </p>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- End of Features Section -->
+        <!--========== SLIDER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+
+        <div id="about">
+            <div class="content-lg container">
+                <!-- Masonry Grid -->
+                <div class="masonry-grid row">
+                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
+                        <div class="margin-b-60">
+                            <h2>Réaliser VOTRE appli</h2>
+                            <p>Grace à nos formations régulières et nos sessions de suivi continu , vous allez maîtriser 
+                                le développement mobile et réaliser votre projet personnel.
+                            </p>
+                        </div>
+                        <img class="full-width img-responsive wow fadeInUp" src="img/500x500/01.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".2s">
+                    </div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                        <div class="margin-b-60">
+                            <img class="full-width img-responsive wow fadeInUp" src="img/500x500/04.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".3s">
+                        </div>
+                        <h2>Aborder le marché des applications mobile ;) </h2>
+                        <p>Une fois achevée , votre application sera publiée sur le Play Store de Google 
+                            et sera accessible à vos amis et à tout le monde !
+                        </p>
+                    </div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                        <div class="margin-t-60 margin-b-60">
+                            <h2>Samsung vous supporte !! </h2>
+                            <p>Avec ses XYZ smartphones tout neufs et ses différents équiments technologiques à votre disposition , 
+                                Samsung vous encourage à innover et à réaliser vos projets </p>
+                        </div>
+                        <img class="full-width img-responsive wow fadeInUp" src="img/500x500/03.jpg" alt="Portfolio Image" data-wow-duration=".3" data-wow-delay=".4s">
+                    </div>
+                </div>
+                <!-- End Masonry Grid -->
+            </div>
+            
+            <div class="bg-color-sky-light">
+                <div class="content-lg container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 md-margin-b-60">
+                            
+                             <div align=center> <h2 align=center >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Présentation de l' I.S.A</h2> <br><br></div>
+                                
 
 
-    <section id="coolautumn" class="coolautumn">
-    </section>
 
-    <section id="drivinghome" class="drivinghome">
-    </section>
+<iframe width="1160" height="515" src="https://www.youtube.com/embed/m3Iv_D_iyvE" frameborder="0" allowfullscreen></iframe>
 
-    <section id="pricing" class="pricing">
-    </section><!-- End of Pricing Section -->
-
-
-    <section id="project" class="project">
-        <div class="about_overlay">
-            <div class="container chikobiko">
+                       </div></div></div></div>
+        <!-- Latest Products -->
+        <div id="products">
+            <div class="content-lg container">
+                <div class="row margin-b-40">
+                    <div class="col-sm-6">
+                        <h2>Profitez de nos avantages !</h2>
+<!--                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p> !-->
+                    </div>
+                </div>
+                <!--// end row -->
 
                 <div class="row">
-                    <div class="main_contact">
-
-                        <div class="head_title">
-                            <h2><i class="fa fa-star"></i> Add a project <i class="lnr lnr-star"></i></h2>
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive" src="img/970x647/01.jpg"  height="30" alt="Latest Products Image">
                         </div>
+                        <h4><a href="#">Coder Workspace</a></h4>
+                        <p>L'I.S.A vous offre un très grand espace de travail avec le plus de confort possible .</p>
+                        
+                    </div>
+                    <!-- End Latest Products -->
 
-                        <div class="main_about_content text-center wow fadeIn" data-wow-duration="1.5s">
-                            <div class="col-md-6">
-                                <form action="addproject.php" method="POST" id="addproject">
-                                    <div class="form-group span4 offset4">
-                                        <input type="text" class="form-control span4 offset4" name="label"
-                                               placeholder="Label" required="">
-                                    </div>
-                                    <div class="form-group">
-											<textarea class="form-control" rows="4" cols="50" name="description">
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive" src="img/970x647/02.jpg" alt="Latest Products Image">
+                        </div>
+                        <h4><a href="#">Soutenu par Samsung </a></h4>
+                        <p>Etant notre partenaire principle , le groupe Kooréan va superviser et encourager
+                            vos projets en vous offrant les ressources materielles dont vous auriez .<besoin></besoin>                             
+                        </p>
+                        
+                    </div>
+                    <!-- End Latest Products -->
 
-								Description
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive" src="img/970x647/03.jpg" alt="Latest Products Image">
+                        </div>
+                        <h4><a href="#">Projets réguliers </a> </h4>
+                        <p>Durant l' année , plusieurs projets sont réalisés tout le long de l'année
+                             et seront présentés devant un jury spécialisé. </p>
+                       
+                    </div>
+                    <!-- End Latest Products -->
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Latest Products -->
+        <!-- Begin Add Student -->
+
+												
+
+
+
+<div align=center>
+                    <h2 align=center >Inscrivez vous !</h2><br><br><br>
+                      
+<form action="addmember" id="formid" method="POST">
+											<div class="form-group">                                                
+												<input style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" type="text" class="form-control" name="name" placeholder="Name" required="">
+											</div>
+												<div class="form-group">
+												<input style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" style="width:50% ;" type="text" class="form-control" name="familyname" placeholder="Family Name" required="">
+											</div>
+											<div class="form-group">
+												<input style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" type="email" class="form-control" name="email" placeholder="Email" required="">
+											</div>
+
+										<div class="form-group">
+												<input style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" type="text" class="form-control" name="phone" placeholder="Phone" required="">
+											</div>
+
+												<div class="form-group">
+											<select style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" class="form-control" data-style="btn-primary" name="level"  >
+												<option value="1">1st year</option>
+												<option value="2">2nd year</option>
+												<option value="3">3rd year</option>
+												<option value="4">4th year</option>
+												<option value="5">5th year </option>
+											</select>
+											   </div>
+											   	<div class="form-group">
+											<select style="width:50% ;-webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" class="form-control" name= "speciality">
+												<option value="GL">GL</option>
+												<option value="RT">RT</option>
+												<option value="IIA">IIA</option>
+												<option value="IMI">IMI</option>
+												<option value="CH">CH</option>
+												<option value="BIO">BIO</option>
+												<option value="MPI">MPI</option>
+												<option value="CBA">CBA</option>
+
+											</select>
+										</div>
+												<br>
+												<a href="" ><input type="Submit" class="btn btn-primary" value="Submit"/></a>
+	                                        </form>
+                                        </div></div>
+                                        <br><br><br><br><br>
+
+            <!-- End Add Student -->
+            <!-- Begin Add Project -->                            
+
+            <div align=center>                        
+                <h2 align=center> Decrivez votre projet </h2> 
+            <form action="addproject.php" method="POST" id="addproject">
+											<div class="form-group span4 offset4">
+												<input style="width:50% ;  -webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" type="text" class="form-control span4 offset4" name="label" placeholder="Label" required="">
+                                            </div>
+<br>
+												<div class="form-group">
+<br>
+                                                    <textarea style="width:50% ; -webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" class="form-control" rows="4" cols="50"  name="descp">Description 
 										</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <select multiple class="form-control" name="membres[]">
-                                            <?php
-                                            $sql = mysqli_query($connect, "SELECT id,nom, prenom FROM membre");
+											</div>
+												<div class="form-group">
+											<select style="width:50% ; -webkit-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+-moz-box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);
+box-shadow: 0px 9px 28px -5px rgba(128,140,150,1);" multiple class="form-control" name="id">
+				<?php 
+                
+        include("connection.php");
+        $reslt=$_bdd->query("select * from membre");
+        $arr=$reslt->fetchAll(PDO::FETCH_OBJ);
+        foreach ($arr as $key) {
+        
+            echo '<option value="'.$key->id.'" >'.$key->prenom." ".$key->nom."</option>";    
+        }
+        
+    /*require('ConnexionDB.php');
+$db =ConnexionDB::getInstance();
+*/
+    
+             //$res = $db->query("select id,nom, prenom from membre ;");
 
-                                            while ($row = $sql->fetch_assoc()) {
+                //if ($res == false ) {echo "Couldn't retrive data from 'membre' ";}
+               // else {
+                 //   $arrxres->fetchAll(PDO::FETCH_OBJ);
+                   //     $arr=$res->fetchAll(PDO::FETCH_OBJ);
+/*
+                    foreach ($arr as $key => $value) {
+                        echo "<h1>key :".$key."</h1>";
+        echo "<option value='".$key->id."' >" .$key->nom . "</option>";
 
-                                                echo "<option value=" . $row['id'] . ">" . $row['prenom'] . " " . $row['nom'] . "</option>";
+                        
+                    } 
 
-                                            }
+                        }*/
 
-                                            ?>
+                        ?>
 
-
-                                        </select>
-                                    </div>
-
-
-                                    <div class="message_btn text-right">
-                                        <a href=""><input type="Submit" class="btn btn-primary" value="submit"/></a>
-                                    </div>
-                                </form>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="register" class="register">
-
-        <div class="about_overlay ">
-            <div class="container bangbang">
-                <div class="row">
-
-                    <div class="main_contact">
-                        <div class="head_title wow fadeInDown" data-wow-duration="1s">
-                            <h2><i class="fa fa-star"></i> Register <i class="lnr lnr-star"></i></h2>
-                        </div>
-                        <div class="contact_content">
-
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="contact_message wow fadeInLeft" data-wow-duration="1.5s">
-                                    <form action="addmember.php" id="formid" method="POST">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Name"
-                                                   required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="familyname"
-                                                   placeholder="Family Name" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email"
-                                                   required="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="phone" placeholder="Phone"
-                                                   required="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <select class="form-control" data-style="btn-primary" name="level"
-                                                    id="level">
-                                                <option value="0" disabled selected>Select your level..</option>
-                                                <option value="1">1st year</option>
-                                                <option value="2">2nd year</option>
-                                                <option value="3">3rd year</option>
-                                                <option value="4">4th year</option>
-                                                <option value="5">5th year</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group" style="visibility: hidden" id="div-speciality">
-                                            <select class="form-control" name="speciality" id="speciality">
-                                                <option value="NONE" disabled selected>Select your speciality</option>
-                                        </div>
-                                        <div class="message_btn text-right">
-                                            <a href=""><input type="Submit" class="btn btn-primary" value="Submit"/></a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        </div>
-
-
-    </section>
-
-    <section id="blogs" class="blogs">
-    </section>
-
-
-    <section id="contact" class="contact">
-        <div class="about_overlay ">
-            <div class="container bangbang">
-                <div class="row">
-                    <div class="main_contact">
-                        <div class="head_title text-center wow fadeInDown" data-wow-duration="1s">
-                            <h2><i class="fa fa-star"></i> Get In touch <i class="lnr lnr-star"></i></h2>
-                        </div>
-                        <div class="contact_content">
-
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="contact_message wow fadeInLeft" data-wow-duration="1.5s">
-                                    <form action="#" id="formid">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Name"
-                                                   required="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email"
-                                                   required="">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" rows="6"
-                                                      placeholder="Message"></textarea>
-                                        </div>
-
-                                        <div class="message_btn text-right">
-                                            <a href="" class="btn btn-primary">Submit</a>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="contact_socail_bookmark_area wow fadeInRight" data-wow-duration="1.5s">
-
-
-                                    <div class="single_contact_phone">
-                                        <h3>Address:</h3>
-                                        <span>Building, 123 Main Street, City Country</span>
-
-                                    </div>
-
-                                    <div class="single_contact_phone">
-                                        <h3>Phone:</h3>
-                                        <span>+48 202 - 555 - 0114</span>
-                                    </div>
-
-                                    <div class="single_contact_phone">
-                                        <h3>Email:</h3>
-                                        <span>XS@yoursite.com</span>
-                                    </div>
-
-                                    <div class="contact_socail_bookmark">
-                                        <ul>
-                                            <li><a href="" class="s_f_1"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="" class="s_f_2"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="" class="s_f_3"><i class="fa fa-deviantart"></i></a></li>
-                                            <li><a href="" class="s_f_4"><i class="fa fa-dribbble"></i></a></li>
-                                            <li><a href="" class="s_f_5"><i class="fa fa-github"></i></a></li>
-                                            <li><a href="" class="s_f_6"><i class="fa fa-youtube"></i></a></li>
-                                            <li><a href="" class="s_f_7"><i class="fa fa-skype"></i></a></li>
-                                            <li><a href="" class="s_f_5"><i class="fa fa-tumblr"></i></a></li>
-                                            <li><a href="" class="s_f_4"><i class="fa fa-behance"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section><!-- End of contact With Map Section -->
-
-<section>
+											
+												</select>
+											</div>
+											<br><br>
+												<a stype="margin:auto;" href="" ><input type="Submit" class="btn btn-primary" value="submit"/></a>
+											
+										</form>
+            </div><br><br><br><br>
+            <!-- End Add Project -->
+            <!-- Google Map -->
+<!--             <div id="map" class="map height-300"></div> !-->
     <div id="map"></div>
     <script>
-        function initMap() {
-            var mapOptions = {
-                zoom: 8
-
-            };
-            var uluru = {lat: 36.8426443, lng: 10.197504200000026};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-            }, mapOptions);
-            map.setZoom(16);
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
+      function initMap() {  
+        var uluru = {lat: 36.842, lng: 10.197};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCEF0kx16cXIi0PVjMBMayhaagAxEEs_A&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U&callback=initMap">
     </script>
-</section>
-
-</figure>
-
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="main_footer text-center wow fadeInUp" data-wow-duration="2s">
-                <p>Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>
-                    2016. All Rights Reserved</p>
-            </div>
         </div>
-    </div>
-</footer>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
 
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <!-- Links -->
+            <div class="section-seperator">
+                <div class="content-md container">
+                    <div class="row">
+                     <!--   <div class="col-sm-2 sm-margin-b-30"> !-->
+                            <!-- List -->
+                     <!--       <ul class="list-unstyled footer-list">  !-->
+                     <!--           <li class="footer-list-item"><a href="#">Home</a></li> !-->
+                     <!--           <li class="footer-list-item"><a href="#">About</a></li> !-->
+                      <!--          <li class="footer-list-item"><a href="#">Contact</a></li> !-->
+                      <!--      </ul> !-->
+                            <!-- End List !-->
+                        <!-- </div> !-->
+                        
+                        <div class="col-sm-2 sm-margin-b-30">
+                            <!-- List -->
+                            <h1><a id="contact" >Contact</a></h1>
+                            <ul class="list-unstyled footer-list">
+                                 <li class="footer-list-item"><a href="#">Twitter</a></li> 
+                                <li class="footer-list-item"><a href="https://www.facebook.com/INSAT-Samsung-Academy-1821836391413465/">Facebook</a></li>
+                                <li class="footer-list-item"><a href="#">Instagram</a></li> 
+                                <li class="footer-list-item"><a href="https://www.youtube.com">YouTube</a></li>
+                            </ul>
+                            <!-- End List -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+            <!-- End Links -->
+        </footer>
+        <!--========== END FOOTER ==========-->
 
-<!-- STRAT SCROLL TO TOP -->
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
-<div class="scrollup">
-    <a href="#"><i class="fa fa-chevron-up"></i></a>
-</div>
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
-<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/vendor/isotope.min.js"></script>
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script> !-->
 
-<script src="assets/js/jquery.easypiechart.min.js"></script>
-<script src="assets/js/jquery.mixitup.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/main.js"></script>
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="js/components/google-map.min.js" type="text/javascript"></script>
 
-</body>
+    </body>
+    <!-- END BODY -->
 </html>
