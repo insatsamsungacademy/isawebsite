@@ -19,7 +19,7 @@
         <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
 
         <!-- THEME STYLES -->
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout.css" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
@@ -27,8 +27,8 @@
        #map {
         height: 400px;
         width: 100%;
-       }
-    </style>
+			}
+			</style>
 
     </head>
     <!-- END HEAD -->
